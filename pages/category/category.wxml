@@ -1,0 +1,14 @@
+<!--pages/category/category.wxml-->
+<scroll-view scroll-y class="scrollPage">
+  <cu-custom bgColor="bg-gradual-blue">
+	<view slot="content">分类</view>
+</cu-custom>
+  <view class="cu-card">
+    <view class="cu-item bg-img shadow-blur" style="background-image:url({{item.category_thumbnail_image}})" wx:for="{{categorys}}" wx:key>
+      <view class="cardTitle" bind:tap="clickcategory" data-index="{{index}}">
+       {{item.name}}
+      </view>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

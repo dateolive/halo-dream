@@ -1,0 +1,10 @@
+<!--components/search/search.wxml-->
+<view class="cu-bar search bg-white">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input bindinput="Search" id="search" name="content" type="text" placeholder="搜索文章、关键词" confirm-type="search"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-blue shadow-blur round" bindtap="SearchSubmit">搜索</button>
+    </view>
+</view>

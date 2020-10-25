@@ -1,0 +1,15 @@
+<!--pages/list/list.wxml-->
+<scroll-view scroll-y class="scrollPage">
+  <cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">{{name}}</view>
+  </cu-custom>
+  <!--文章列表-->
+<articles articles="{{articles}}"></articles>
+<view class="cu-load bg-white over margin-top-xl"></view>
+<view class="cu-bar bg-white margin-top">
+  <view class='action'>
+    <text class='sm'></text>
+  </view>
+</view>
+</scroll-view>

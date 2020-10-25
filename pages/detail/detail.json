@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "htmltowxml": "/components/html2wxml-component/html2wxml",
+    "comments":"/components/comments/comments"
+  }
+}

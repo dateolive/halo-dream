@@ -1,0 +1,6 @@
+<!--components/articles/articles.wxml-->
+<view class="">
+<block wx:for="{{articles}}" wx:key="index" > 
+<article item="{{item}}"></article>
+</block>
+</view>

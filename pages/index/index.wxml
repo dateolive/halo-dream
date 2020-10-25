@@ -1,0 +1,14 @@
+<cu-custom bgColor="bg-gradual-blue">
+	<view slot="content">首页</view>
+</cu-custom>
+<!--轮播图-->
+<swipe swiperList="{{bannersPost}}" />
+<view style="margin-right:20rpx; margin-left:20rpx;">
+        <official-account style=""></official-account>
+</view>
+<!--搜索-->
+<search />
+
+<!--文章列表-->
+<articles articles="{{articles}}"></articles>
+

@@ -1,0 +1,83 @@
+<!--pages/detail/detail.wxml-->
+<scroll-view scroll-y class="DrawerPage" scroll-with-animation="true"
+  style="background-color: {{skin?'#030852':'#ffffff'}};">
+  <cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">{{title}}</view>
+  </cu-custom>
+  <view bindtouchstart="touchStart" bindtouchend="touchEnd" class="flex justify-center align-center bg-white"
+    style="width:100%; height:460rpx; background-image:url({{headimg}}); background-repeat: no-repeat; background-size: 100% 100%;">
+  </view>
+
+  <view class="padding solid s-bottom margin-top">
+    <view class="flex-sub text-center margin-sm">
+      <view class="text-xxl">
+        <text class="text-black text-bold">{{title}}</text>
+      </view>
+    </view>
+
+
+    <view class="cf">
+      <view class="margin-sm text-center">
+        <view class="cu-capsule round">
+          <view class="cu-tag bg-red sm">
+            <text class="cuIcon-likefill"></text>
+          </view>
+          <view class="cu-tag line-red sm">
+            {{lovecnt}}
+          </view>
+        </view>
+        <view class="cu-capsule round">
+          <view class="cu-tag bg-orange sm">
+            <text class="cuIcon-hotfill"></text>
+          </view>
+          <view class="cu-tag line-orange sm">
+            {{readcnt}}
+          </view>
+        </view>
+        <view class="cu-capsule round">
+          <view class="cu-tag  bg-purple sm">
+            <text class="cuIcon-cascades"></text>
+          </view>
+          <view class="cu-tag line-purple sm">
+            {{category_name}}
+          </view>
+        </view>
+        <view class="cu-capsule round">
+          <view class="cu-tag  bg-blue sm">
+            <text class="cuIcon-timefill"></text>
+          </view>
+          <view class="cu-tag line-blue sm">
+            {{posttime}}
+          </view>
+        </view>
+        <text class="cu-capsule" decode="{{true}}">&nbsp;</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="margin-sm">
+      <htmltowxml text="{{postContent}}" linenums="{{false}}" highlightStyle="darcula" type="md" bindWxmlTagATap="wxmlTagATap"></htmltowxml>
+  </view>
+
+  <view class="cu-bar bg-white align-center">
+    <view class="action border-title">
+      <text class="text-xxl text-bold text-blue">评论</text>
+      <text class="bg-gradual-blue"></text>
+    </view>
+  </view>
+  <!--评论-->
+  <comments allcomments="{{allcomments}}"></comments>
+  <!--end-->
+  <view class='placeholder-view'></view>
+  <view class="cu-bar input tabar">
+    <view class="action">
+      <open-data type="userAvatarUrl" class="cu-avatar sm round margin-left text-grey"></open-data>
+    </view>
+    <input class="solid-bottom" focus="{{false}}" maxlength="300" cursor-spacing="10" placeholder="评论一下吧~"></input>
+    <button class="cu-btn bg-blue shadow-blur" bind:tap="sendcontent">发送</button>
+    <view class="action">
+      <text class="cuIcon-more text-grey"></text>
+    </view>
+  </view>
+</scroll-view>

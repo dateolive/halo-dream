@@ -1,0 +1,47 @@
+<!--pages/otherpages/demotime/demotime.wxml-->
+<scroll-view scroll-y class="DrawerPage" scroll-with-animation="true" style="background-color: {{skin?'#030852':'#ffffff'}};">
+
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">项目进展</view>
+  </cu-custom>
+<view class="bg-img padding-tb-xl" style="background-image: url('https://www.datealive.top/wp-content/uploads/2020/05/26.jpg');height: 414rpx;">
+</view>
+
+<view class="cu-timeline">
+    <view class="cu-item text-mauve  cuIcon-favorfill">
+            <view class="bg-mauve  content shadow-blur">
+                大家给个star吧！
+            </view>
+        </view>
+        
+        <view class="cu-time">2020.10.25</view>
+    <view class="cu-item text-blue">
+        <view class="bg-blue content shadow-blur">
+            继续扩展功能
+        </view>
+    </view>
+    <view class="cu-time">2020.10.25</view>
+
+    <view class="cu-item text-green">
+        <view class="bg-green content shadow-blur">
+            功能完善
+        </view>
+    </view>
+    <view class="cu-time">2020.10.24</view>
+
+    <view class="cu-item text-red cuIcon-favorfill">
+        <view class="content bg-red shadow-blur">
+            v1.0 项目开始
+        </view>
+    </view>
+    <view class="cu-time">2020.10.23</view>
+
+</view>
+
+<view class="text-xs flex justify-center" style="margin-bottom: 20rpx; width: 100%; text-align: center;">
+    <view class="text-grey" style="margin-right:4rpx;">Powered by</view>
+    <view class="text-lightBlue">datealive</view>
+</view>
+</scroll-view>
+

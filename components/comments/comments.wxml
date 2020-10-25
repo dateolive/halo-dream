@@ -1,0 +1,50 @@
+<!--components/comments/comments.wxml-->
+<block wx:if="{{allcomments.length>0?true:false}}">
+  <block wx:for="{{allcomments}}" wx:key="index" wx:for-index="allindex">
+    <view class="cu-chat">
+      <view class="cu-item">
+        <view class="basis-xs">
+          <view class="cu-avatar lg round margin-left-sm"
+            style="background-image:url(https://www.datealive.top/wp-content/uploads/2020/04/头像.jpeg);"></view>
+        </view>
+        <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
+          <view class="padding-xs">
+            <text class="text-black text-bold">{{item.author_name}}</text>
+            <view class="fr text-xs" style="line-height: 32rpx;">
+              <text class="text-grey">{{item.date}}</text>
+            </view>
+          </view>
+          <view class="main">
+            <view class="content">
+              <text>{{item.content}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{allcomments[allindex].child.length>0?true:false}}">
+        <view class="cu-item" wx:for="{{allcomments[allindex].child}}" wx:key="index">
+          <view class="basis-xs">
+          <view class="cu-avatar lg round margin-left-sm"
+            style="background-image:url(https://www.datealive.top/wp-content/uploads/2020/04/头像.jpeg);"></view>
+        </view>
+        <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
+          <view class="padding-xs">
+            <text class="text-black text-bold">{{item.author_name}} @ {{allcomments[allindex].author_name}}</text>
+            <view class="fr text-xs" style="line-height: 32rpx;">
+              <text class="text-grey">{{item.date}}</text>
+            </view>
+          </view>
+          <view class="main">
+            <view class="content">
+              <text>{{item.content}}</text>
+            </view>
+          </view>
+        </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <view class="text-center">来抢沙发吧~</view>
+</block>

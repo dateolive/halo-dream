@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "articles":"/components/articles/articles"
+  }
+}

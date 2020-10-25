@@ -1,0 +1,33 @@
+<!--pages/home/home.wxml-->
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+    <view class="text-xxl" style="font-weight:bold">梦独吟博客
+      <text class="text-df">v1.0</text>
+    </view>
+    <view class="margin-top-sm">
+      <text>By:张壬丰</text>
+    </view>
+    <image src="/images/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
+    <view class="cu-item arrow">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/">
+        <text class="cuIcon-github text-grey"></text>
+        <text class="text-grey">GitHub</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <view class="content" bindtap="showQrcode">
+        <text class="cuIcon-appreciatefill text-red"></text>
+        <text class="text-grey">赞赏支持</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="feedback">
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>

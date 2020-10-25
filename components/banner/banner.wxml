@@ -1,0 +1,19 @@
+<!--components/banner/banner.wxml-->
+<view class="bg-gray">
+  <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true"
+    autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3"
+    indicator-active-color="#0081ff">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
+      <view class="swiper-item" bind:tap="itemClick" data-index="{{index}}">
+        <view class="bg-img bg-mask padding-tb-xl"
+          style="background-image: url({{item.post_medium_image_300}});height: 414rpx;">
+          <view class="padding-xl text-white">
+            <view class="text-center padding-xs text-xl text-bold text-shadow">
+              {{item.title.rendered}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

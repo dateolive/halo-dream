@@ -1,0 +1,29 @@
+<!--components/article/article.wxml-->
+<view class="padding-sm solid-bottom margin-top"></view>
+<view class="cu-card case no-card" bind:tap="itemClick">
+<view class="cu-item shadow">
+    <view class="image">
+      <image src="{{item.post_full_image || imgurl}}" mode="widthFix"></image>
+      <view class="cu-tag radius bg-grey" wx:if="{{item.category_name}}">{{item.category_name}}</view>
+      <view class="cu-bar bg-shadeBottom">
+        <text class="text-cut">{{item.title.rendered || item.post_title}}</text>
+      </view>
+    </view>
+    <view class="cu-list menu-avatar">
+      <view class="cu-item">
+        <view class="cu-avatar round lg" style="background-image:url(https://www.datealive.top/wp-content/uploads/2020/05/26.jpg);"></view>
+        <view class="content flex-sub">
+          <view class="text-grey">梦独吟</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{item.post_date}}
+            <view class="text-gray text-sm">
+              <text class="cuIcon-attentionfill margin-lr-xs"></text> {{item.pageviews}}
+              <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.like_count}}
+              <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.total_comments}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+	</view>
+</view>
