@@ -68,7 +68,7 @@ export{
 
 ## 小程序演示
 
-![WeHalo](https://imapi.datealive.top/tp/halodream.png)
+![Halo-Dream](https://imapi.datealive.top/tp/halodream.png "Halo-Dream")
 
 
 
