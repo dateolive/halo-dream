@@ -2,7 +2,7 @@
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
     <view class="text-xxl" style="font-weight:bold">梦独吟博客
-      <text class="text-df">v1.0</text>
+      <text class="text-df">v1.1</text>
     </view>
     <view class="margin-top-sm">
       <text>By:张壬丰</text>
@@ -11,7 +11,7 @@
   </view>
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <view class="content" bindtap="CopyLink" data-link="https://github.com/">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/dateolive/halo-dream">
         <text class="cuIcon-github text-grey"></text>
         <text class="text-grey">GitHub</text>
       </view>

@@ -4,8 +4,8 @@
 	<view slot="content">分类</view>
 </cu-custom>
   <view class="cu-card">
-    <view class="cu-item bg-img shadow-blur" style="background-image:url({{item.category_thumbnail_image}})" wx:for="{{categorys}}" wx:key>
-      <view class="cardTitle" bind:tap="clickcategory" data-index="{{index}}">
+    <view class="cu-item bg-img shadow-blur animation-scale-up"  wx:for="{{categorys}}" wx:key="index" style="background-image:url({{item.category_thumbnail_image}});animation-delay: {{(index+1)*0.2*animationTime}}s;">
+      <view class="cardTitle" bind:tap="clickcategory" data-index="{{index}}" >
        {{item.name}}
       </view>
     </view>

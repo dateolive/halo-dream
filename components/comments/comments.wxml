@@ -1,11 +1,11 @@
 <!--components/comments/comments.wxml-->
 <block wx:if="{{allcomments.length>0?true:false}}">
   <block wx:for="{{allcomments}}" wx:key="index" wx:for-index="allindex">
-    <view class="cu-chat">
+    <view class="cu-chat" bind:tap="clickcomments">
       <view class="cu-item">
         <view class="basis-xs">
           <view class="cu-avatar lg round margin-left-sm"
-            style="background-image:url(https://www.datealive.top/wp-content/uploads/2020/04/头像.jpeg);"></view>
+            style="background-image:url({{item.author_url}});"></view>
         </view>
         <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
           <view class="padding-xs">
@@ -25,7 +25,7 @@
         <view class="cu-item" wx:for="{{allcomments[allindex].child}}" wx:key="index">
           <view class="basis-xs">
           <view class="cu-avatar lg round margin-left-sm"
-            style="background-image:url(https://www.datealive.top/wp-content/uploads/2020/04/头像.jpeg);"></view>
+            style="background-image:url({{item.author_url}});"></view>
         </view>
         <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
           <view class="padding-xs">

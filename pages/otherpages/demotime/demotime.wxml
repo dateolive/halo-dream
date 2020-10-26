@@ -9,6 +9,13 @@
 </view>
 
 <view class="cu-timeline">
+    <view class="cu-item text-green  cuIcon-emoji">
+            <view class="bg-green  content shadow-blur">
+                项目添加动画特效，文章详情页面优化，友情链接开发
+            </view>
+        </view>
+        
+        <view class="cu-time">2020.10.26</view>
     <view class="cu-item text-mauve  cuIcon-favorfill">
             <view class="bg-mauve  content shadow-blur">
                 大家给个star吧！

@@ -21,7 +21,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    
+    clickcomments(){
+      console.log(this.data.allcomments)
+    }
   },
   options: {
     addGlobalClass: true

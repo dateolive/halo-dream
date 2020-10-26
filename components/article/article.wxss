@@ -1,1 +1,2 @@
 /* components/article/article.wxss */
+@import "/colorui/animation.wxss";

@@ -1,4 +1,5 @@
 /* pages/category/category.wxss */
+@import "/colorui/animation.wxss";
 .cardTitle{
   color: #fff;
   padding: 90rpx 60rpx;

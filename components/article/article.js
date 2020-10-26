@@ -14,7 +14,9 @@ Component({
    * 组件的初始数据
    */
   data: {
-    imgurl:'https://www.datealive.top/wp-content/uploads/2020/05/26.jpg'
+    imgurl:'https://www.datealive.top/wp-content/uploads/2020/05/26.jpg',
+    index:0,
+    animationTime: 1,
   },
 
   /**

@@ -8,7 +8,9 @@
     "pages/searchlist/searchlist",
     "pages/list/list",
     "pages/otherpages/demotime/demotime",
-    "pages/otherpages/rating/rating"
+    "pages/otherpages/rating/rating",
+    "pages/otherpages/friends/friends",
+    "pages/otherpages/diary/diary"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,5 @@
+/* pages/otherpages/friends/friends.wxss */
+@import "/colorui/animation.wxss";
+.FriendsRound {
+	border-radius: 20rpx;
+}

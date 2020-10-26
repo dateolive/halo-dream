@@ -5,25 +5,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    iconList: [{
-      icon: 'timefill',
-      color: 'yellow',
-      badge: 0,
-      name: '项目进展',
-      url:'/pages/otherpages/demotime/demotime'
-    }, {
+    iconList: [
+      {
+        icon: 'edit',
+        color: 'orange',
+        badge: 0,
+        name: '日记',
+        url:'/pages/otherpages/diary/diary'
+      }, {
       icon: 'upstagefill',
       color: 'cyan',
       badge: 0,
       name: '排行榜',
       url:'/pages/otherpages/rating/rating'
     },  {
-      icon: 'more',
+      icon: 'friendfill',
       color: 'purple',
+      badge: 0,
+      name: '友情链接',
+      url:'/pages/otherpages/friends/friends'
+    },
+    {
+      icon: 'timefill',
+      color: 'yellow',
+      badge: 0,
+      name: '项目进展',
+      url:'/pages/otherpages/demotime/demotime'
+    },  
+    {
+      icon: 'more',
+      color: 'blue',
       badge: 0,
       name: '其他功能待开发',
       url:'/pages/otherpages/otherpages'
-    }],
+    }
+  ],
     gridCol:3,
     skin: false
   },

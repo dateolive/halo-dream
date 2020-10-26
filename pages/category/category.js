@@ -6,6 +6,7 @@ Page({
 
   data: {
     categorys:[],
+    animationTime: 1,
     id:0,
     cnt:20,  //分类显示最多数目
   },
