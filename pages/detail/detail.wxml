@@ -10,6 +10,7 @@
   <view bindtouchstart="touchStart" bindtouchend="touchEnd" class="flex justify-center align-center bg-white"
     style="width:100%; height:460rpx; background-image:url({{headimg}}); background-repeat: no-repeat; background-size: 100% 100%;">
   </view>
+ 
 
   <view class="padding solid s-bottom margin-top">
     <view class="flex-sub text-center margin-sm">
@@ -69,17 +70,22 @@
     </view>
   </view>
   <!--评论-->
-  <comments allcomments="{{allcomments}}"></comments>
+  <comments allcomments="{{allcomments}}" bind:parentcomment="parentcomment" bind:childcomment="childcomment"></comments>
   <!--end-->
   <view class='placeholder-view'></view>
   <view class="cu-bar input tabar">
     <view class="action">
       <open-data type="userAvatarUrl" class="cu-avatar sm round margin-left text-grey"></open-data>
     </view>
-    <input class="solid-bottom" focus="{{false}}" maxlength="300" cursor-spacing="10" placeholder="评论一下吧~"></input>
-    <button class="cu-btn bg-blue shadow-blur" bind:tap="sendcontent">发送</button>
+    <input class="solid-bottom"  bindinput="inputcontent" focus="{{false}}" maxlength="300" cursor-spacing="10" placeholder="{{inputcontent}}"></input>
+    <button class="cu-btn round bg-blue shadow-blur"  bind:tap="submitcontent">发送</button>
     <view class="action">
+      <block wx:if="{{!hiddenbutton}}">
+        <button class="cu-btn round bg-blue shadow-blur"  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+    </block>
+    <block wx:else>
       <text class="cuIcon-more text-grey"></text>
+    </block>
     </view>
   </view>
 </scroll-view>

@@ -1,8 +1,8 @@
 <!--components/comments/comments.wxml-->
 <block wx:if="{{allcomments.length>0?true:false}}">
   <block wx:for="{{allcomments}}" wx:key="index" wx:for-index="allindex">
-    <view class="cu-chat" bind:tap="clickcomments">
-      <view class="cu-item">
+    <view class="cu-chat">
+      <view class="cu-item"  bind:tap="clickparentcomments" data-id="{{item.id}}" data-name="{{item.author_name}}" data-userid="{{item.userid}}" data-formId="{{item.formId}}">
         <view class="basis-xs">
           <view class="cu-avatar lg round margin-left-sm"
             style="background-image:url({{item.author_url}});"></view>
@@ -22,7 +22,8 @@
         </view>
       </view>
       <view wx:if="{{allcomments[allindex].child.length>0?true:false}}">
-        <view class="cu-item" wx:for="{{allcomments[allindex].child}}" wx:key="index">
+        <view class="cu-item" wx:for="{{allcomments[allindex].child}}" wx:key="index"
+                              bind:tap="clickcchildcomments" data-id="{{item.id}}" data-name="{{item.author_name}}" data-userid="{{item.userid}}" data-formId="{{item.formId}}">
           <view class="basis-xs">
           <view class="cu-avatar lg round margin-left-sm"
             style="background-image:url({{item.author_url}});"></view>

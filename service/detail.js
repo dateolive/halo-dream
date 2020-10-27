@@ -20,3 +20,14 @@ export function getComments(id,limit,page){
     })
   })
 }
+export function sendComment(datas){
+  return  new Promise((resolve,reject)=>{
+    wx.request({
+      url: BASEURL+'/wp-json/watch-life-net/v1/comment/add',
+      method: 'post',
+      data:datas,
+      success:resolve,
+      fail:reject
+    })
+  })
+}

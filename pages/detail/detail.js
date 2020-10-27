@@ -1,7 +1,8 @@
 // pages/detail/detail.js
 import {
   getpostData,
-  getComments
+  getComments,
+  sendComment,
 } from '../../service/detail.js'
 Page({
   /**
@@ -20,7 +21,17 @@ Page({
     isShow: false,
     isLoad: true,
     menuBackgroup: false,
-    postid: 0
+    postid: 0,
+    inputcontent:'评论一下吧~',
+    replyid:0,
+    SendContent:'',
+    author_name:'',
+    author_email:'',
+    author_url:'',
+    userid:'',
+    formid:'',
+    islogin:false,
+    hiddenbutton:false
   },
 
   /**
@@ -36,7 +47,28 @@ Page({
     this.setData({
       postid: id
     })
-
+    var that=this
+    wx.getSetting({
+      success (res){
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function(res) {
+              that.setData({
+                author_name:res.userInfo.nickName,
+                author_url:res.userInfo.avatarUrl,
+                islogin:true,
+                hiddenbutton:true
+              })
+            }
+         
+          })
+        }
+      }
+    })
+  },
+  onShow: function (){
+   
   },
   _getpostData(id) {
     getpostData(id).then(res => {
@@ -70,18 +102,13 @@ Page({
       this.setData({
         allcomments
       })
+     // console.log(res)
     }).catch(err => {
       console.log(err)
     })
   },
   wxmlTagATap(e) {
     console.log(e);
-  },
-  sendcontent() {
-    wx.showToast({
-      title: '评论功能开发中',
-      duration: 1500
-    })
   },
   onShareAppMessage: function (res) {
     console.log(res)
@@ -110,4 +137,80 @@ Page({
       imageUrl: this.data.headimg,
     }
   },
+  parentcomment(e){
+    const inputcontent='@'+e.detail.replyname
+    const replyid=e.detail.replyid
+    const formId=e.detail.formId
+    const userid=e.detail.userid
+    this.setData({
+      inputcontent,
+      replyid,
+      formid:formId,
+      userid
+    })
+  },
+  childcomment(e){
+    const inputcontent='@'+ e.detail.replyname
+    const replyid=e.detail.replyid
+    const formId=e.detail.formId
+    const userid=e.detail.userid
+    this.setData({
+      inputcontent,
+      replyid,
+      formid:formId,
+      userid
+    })
+  },
+  inputcontent(e){
+    var content = e.detail.value.replace(/\s+/g, '');
+    //console.log(content);
+     this.setData({
+      SendContent: content,
+     });
+  },
+  submitcontent(e){
+    const content=this.data.SendContent
+    const replyid=this.data.replyid
+    const name=this.data.author_name
+    const url=this.data.author_url
+    const email='2448282543@qq.com'
+    const userid=this.data.userid
+    const datas={
+      post:this.data.postid,//
+      author_name:name,//
+      author_email:email,
+      content:content,//
+      author_url:url,
+      parent:replyid,//
+      openid:'ovoZ55DCVPTPzo7P85lNX03HLLoI',
+      userid:userid,
+      formId:this.data.formId
+    }
+    if(this.data.islogin){
+      sendComment(datas).then(res=>{
+        wx.showToast({
+          title: '留言成功待审核',
+          icon: 'success',
+          duration: 1500
+        })
+        }).catch(err=>{
+          console.log(err)
+        })
+    }else{
+      wx.showToast({
+        title: '请先登录',
+        icon: 'fail',
+        duration: 1500
+      })
+    }
+ 
+  },
+  bindGetUserInfo (e) {
+    this.setData({
+      author_name:e.detail.userInfo.nickName,
+      author_url:e.detail.userInfo.avatarUrl
+    })
+  },
+
+  
 })
