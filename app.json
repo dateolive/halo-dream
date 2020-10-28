@@ -10,7 +10,9 @@
     "pages/otherpages/demotime/demotime",
     "pages/otherpages/rating/rating",
     "pages/otherpages/friends/friends",
-    "pages/otherpages/diary/diary"
+    "pages/otherpages/diary/diary",
+    "pages/otherpages/bilibili/bilibili"
+  
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -31,7 +31,7 @@ Page({
     userid:'',
     formid:'',
     islogin:false,
-    hiddenbutton:false
+    hiddenbutton:false,
   },
 
   /**
@@ -47,6 +47,12 @@ Page({
     this.setData({
       postid: id
     })
+    
+  },
+  onShow:function(){
+    this._login()
+  },
+  _login(){
     var that=this
     wx.getSetting({
       success (res){
@@ -66,9 +72,6 @@ Page({
         }
       }
     })
-  },
-  onShow: function (){
-   
   },
   _getpostData(id) {
     getpostData(id).then(res => {
@@ -99,6 +102,7 @@ Page({
 
     getComments(id, limit, 1).then(res => {
       const allcomments = res.data.data
+      //console.log(res)
       this.setData({
         allcomments
       })
@@ -186,7 +190,8 @@ Page({
       userid:userid,
       formId:this.data.formId
     }
-    if(this.data.islogin){
+    if(this.data.SendContent.length>0){
+    if(this.data.islogin&&this.data.SendContent.length>0){
       sendComment(datas).then(res=>{
         wx.showToast({
           title: '留言成功待审核',
@@ -196,21 +201,49 @@ Page({
         }).catch(err=>{
           console.log(err)
         })
-    }else{
+    }else {
       wx.showToast({
         title: '请先登录',
         icon: 'fail',
         duration: 1500
       })
     }
+  }else{
+    wx.showToast({
+      title: '不能为空',
+      icon: 'fail',
+      duration: 1500
+    })
+  }
  
   },
-  bindGetUserInfo (e) {
-    this.setData({
-      author_name:e.detail.userInfo.nickName,
-      author_url:e.detail.userInfo.avatarUrl
-    })
-  },
+  bindGetUserInfo: function(e) {
+    if (e.detail.userInfo) {
+        //用户按了允许授权按钮
+        var that = this;
+        //授权成功后,通过改变 isHide 的值，让实现页面显示出来，把授权页面隐藏起来
+        that.setData({
+          author_name:e.detail.userInfo.nickName,
+          author_url:e.detail.userInfo.avatarUrl,
+          islogin:true,
+          hiddenbutton:true
+        });
+    } else {
+        //用户按了拒绝按钮
+        wx.showModal({
+            title: '警告',
+            content: '请重新授权后再访问',
+            showCancel: false,
+            confirmText: '返回授权',
+            success: function(res) {
+                // 用户没有授权成功，不需要改变 isHide 的值
+                if (res.confirm) {
+                    console.log('用户点击了“返回授权”');
+                }
+            }
+        });
+    }
+}
 
   
 })

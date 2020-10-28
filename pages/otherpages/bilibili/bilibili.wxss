@@ -1,0 +1,60 @@
+/* pages/otherpages/bilibili/bilibili.wxss */
+@import "/colorui/animation.wxss";
+.zhuifItem {
+  width: 100%;
+  line-height: 40rpx;
+  white-space: nowrap;
+  margin: 20rpx;
+  float: left;
+  overflow: hidden;
+  display: block;
+  padding: 0% 1% 0% 0%;
+  height: 220rpx;
+  color: #5755D9;
+  text-decoration: none;
+}
+.zhuifItem image {
+  pointer-events: none;
+  height: 210rpx;
+  width: 148rpx;
+  float: left;
+  border-radius: 12rpx;
+  box-shadow: 4rpx 4rpx 10rpx #AAA;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+.zhuifItem .zhuiftext {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 80rpx;
+  font-size: 28rpx;
+  padding: 10rpx 0rpx 0rpx 14rpx;
+  line-height: 100%;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color:#222222;
+}
+.zhuifItem .zhuiftext1 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  font-size: 36rpx;
+  padding: 4rpx 0rpx 0rpx 14rpx;
+  color:#222222;
+  height: 48rpx;
+}
+.zhuifItem .zhuiftext2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  font-size: 24rpx;
+  padding: 0rpx 0rpx 0rpx 14rpx;
+  color:#999999;
+  line-height:34rpx;
+}

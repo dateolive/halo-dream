@@ -1,7 +1,7 @@
 <!--pages/detail/detail.wxml-->
 <scroll-view scroll-y class="DrawerPage" scroll-with-animation="true"
   style="background-color: {{skin?'#030852':'#ffffff'}};">
-  <cu-custom bgImage="/images/wave.gif" isBack="{{false}}" isCustom="{{true}}" isNav="{{false}}">
+  <cu-custom bgImage="https://www.datealive.top/wp-content/uploads/2020/10/wave.gif" isBack="{{false}}" isCustom="{{true}}" isNav="{{false}}">
         <view slot="backText">返回</view>
         <view slot="content" class="text-shadow-meows">
           <text class="text-white text-bold">{{title}}</text>
@@ -78,14 +78,14 @@
       <open-data type="userAvatarUrl" class="cu-avatar sm round margin-left text-grey"></open-data>
     </view>
     <input class="solid-bottom"  bindinput="inputcontent" focus="{{false}}" maxlength="300" cursor-spacing="10" placeholder="{{inputcontent}}"></input>
-    <button class="cu-btn round bg-blue shadow-blur"  bind:tap="submitcontent">发送</button>
     <view class="action">
       <block wx:if="{{!hiddenbutton}}">
-        <button class="cu-btn round bg-blue shadow-blur"  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
+      <button class="cu-btn round bg-blue shadow-blur"  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">登录</button>
     </block>
     <block wx:else>
-      <text class="cuIcon-more text-grey"></text>
+      <button class="cu-btn round bg-blue shadow-blur"  bind:tap="submitcontent">发送</button>
     </block>
     </view>
+    <text class="cuIcon-more text-grey"></text>
   </view>
 </scroll-view>

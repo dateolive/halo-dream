@@ -26,6 +26,13 @@ Page({
       url:'/pages/otherpages/friends/friends'
     },
     {
+      icon: 'crown',
+      color: 'blue',
+      badge: 0,
+      name: 'b站番剧',
+      url:'/pages/otherpages/bilibili/bilibili'
+    },
+    {
       icon: 'timefill',
       color: 'yellow',
       badge: 0,
@@ -34,7 +41,7 @@ Page({
     },  
     {
       icon: 'more',
-      color: 'blue',
+      color: 'green',
       badge: 0,
       name: '其他功能待开发',
       url:'/pages/otherpages/otherpages'

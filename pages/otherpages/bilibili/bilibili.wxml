@@ -1,0 +1,25 @@
+<!--pages/otherpages/bilibili/bilibili.wxml-->
+<scroll-view scroll-y class="DrawerPage" scroll-with-animation="true" style="background-color: {{skin?'#030852':'#ffffff'}};">
+
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">bilibili</view>
+</cu-custom>
+<scroll-view scroll-x class="bg-gradual-blue nav text-center">
+  <view class="cu-item {{0==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="0">
+    <text class="cuIcon-favorfill"></text> 追番
+  </view>
+  <view class="cu-item {{1==TabCur?'text-white cur':''}}" bindtap="tabSelect" data-id="1">
+    <text class="cuIcon-discoverfill"></text> 追剧
+  </view>
+</scroll-view>
+<block wx:for="{{bilibili}}" wx:key="index">
+<view  target="_blank" rel="external nofollow noopener noreferrer" class="zhuifItem animation-slide-bottom" style="background: none;animation-delay: {{(index+1)*0.6*animationTime}}s;">
+  <image src="{{item.cover}}" />
+  <text class="zhuiftext1">{{item.title}}</text>
+  <text class="zhuiftext">{{item.evaluate}}</text>
+  <text class="zhuiftext2" decode='true'>
+    &nbsp;&nbsp; {{item.season_type_name}}&nbsp;&nbsp;|&nbsp;&nbsp;{{item.areas[0].name}}&nbsp;&nbsp;|&nbsp;&nbsp;{{item.publish.release_date_show}}&nbsp;&nbsp;|&nbsp;&nbsp;{{item.badge}}&nbsp;&nbsp;|&nbsp;&nbsp;{{item.new_ep.index_show}}</text>
+  </view>
+</block>
+</scroll-view>

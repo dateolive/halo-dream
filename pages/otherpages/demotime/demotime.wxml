@@ -9,6 +9,20 @@
 </view>
 
 <view class="cu-timeline">
+    <view class="cu-item text-yellow">
+            <view class="bg-yellow  content shadow-blur">
+                b站追番追剧页面实现，评论区优化，登录功能优化
+            </view>
+        </view>
+        
+        <view class="cu-time">2020.10.28</view>
+    <view class="cu-item text-pink  cuIcon-favorfill">
+            <view class="bg-pink  content shadow-blur">
+                文章详情页面优化，评论功能实现
+            </view>
+        </view>
+        
+        <view class="cu-time">2020.10.27</view>
     <view class="cu-item text-green  cuIcon-emoji">
             <view class="bg-green  content shadow-blur">
                 项目添加动画特效，文章详情页面优化，友情链接开发

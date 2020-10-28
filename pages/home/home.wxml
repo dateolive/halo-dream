@@ -1,8 +1,8 @@
 <!--pages/home/home.wxml-->
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
-    <view class="text-xxl" style="font-weight:bold">梦独吟博客
-      <text class="text-df">v1.1</text>
+    <view class="text-xxl" style="font-weight:bold">Halo Dream博客
+      <text class="text-df">v1.3</text>
     </view>
     <view class="margin-top-sm">
       <text>By:张壬丰</text>
@@ -23,7 +23,7 @@
       </view>
     </view>
     <view class="cu-item arrow">
-      <button class="cu-btn content" open-type="feedback">
+      <button class="cu-btn content" open-type="contact">
         <text class="cuIcon-writefill text-cyan"></text>
         <text class="text-grey">意见反馈</text>
       </button>
