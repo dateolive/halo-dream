@@ -72,11 +72,9 @@ export{
 ![Halo-Dream](https://www.datealive.top/wp-content/uploads/2020/10/16038062271.png "Halo-Dream")
 
 <center class="half">
-
 <img src="http://upload-images.jianshu.io/upload_images/23102824-bfe3e1c526544090.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><br/>
-
 <img src="http://upload-images.jianshu.io/upload_images/23102824-e8dafd2349f5b15e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><br/>
-
+</center>
 <img src="http://upload-images.jianshu.io/upload_images/23102824-ff774bf1765a1e0d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><br/>
 
 <img src="http://upload-images.jianshu.io/upload_images/23102824-86bc9f606d6f0c99.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><br/>
@@ -99,7 +97,7 @@ export{
 
 <img src="http://upload-images.jianshu.io/upload_images/23102824-fab150f5f78c8dc0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><br/>
 
-</center>
+
 
 
 ## 许可证
