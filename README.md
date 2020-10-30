@@ -31,7 +31,7 @@
 
 ## 简介
 
-**Halo-dream**，基于WordPress和WP REST API的博客小程序，界面简洁，轻快，功能强大
+**Halo-dream**，基于WordPress和WP REST API的博客小程序，界面简洁，轻快，功能强大，**支持代码高亮，友链显示功能，b站追番追剧等各种功能**
 
 > ✍ Halo-dream 一款基于wordpress的个人独立博客系统
 > 项目地址：https://github.com/dateolive/halo-dream
@@ -69,7 +69,13 @@ export{
 
 ## 小程序演示
 
-![Halo-Dream](https://www.datealive.top/wp-content/uploads/2020/10/16037043811.png "Halo-Dream")
+![Halo-Dream](https://www.datealive.top/wp-content/uploads/2020/10/16038062271.png "Halo-Dream")
+
+<figure class="third">
+  
+<img src="http://upload-images.jianshu.io/upload_images/23102824-bfe3e1c526544090.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-e8dafd2349f5b15e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-ff774bf1765a1e0d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-86bc9f606d6f0c99.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-67bf389b63befdfd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-1e52dc2acb317242.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-50b97a1465d367dc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-9dddc21bad009d2a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-072e6280871ddd15.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-bb476f13d872fa66.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-c98cf99b83718120.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/><img src="http://upload-images.jianshu.io/upload_images/23102824-ae1ea6f2ea0a5954.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1080/q/50" width="200" height="auto" alt="微信小程序"/>
+</figure>
+
 
 
 ## 许可证
@@ -89,14 +95,26 @@ export{
 - [x] 热点文章排行榜
 - [x] 友链显示功能
 - [x] 文章评论功能
+- [x] b站追番页面
+- [x] 文章生成海报功能
+- [x] 邮箱回复功能
 
-## 未实现功能
-
-- [ ] 点赞功能（云函数）
-- [ ] 生成海报（微信朋友圈装X）
-- [ ] 其他功能有idea就添加
+## 其他功能有idea待实现
 
 ## 项目更新日志
+
+### 2020年10月30日 更新版本至 v1.4.0
+
+* 新增邮箱回复功能
+* 界面ui优化
+* 生成海报功能
+* 评论区一级到四级回复bug修复
+
+### 2020年10月28日 更新版本至 v1.3.0
+
+* b站追番追剧页面实现
+* 评论区优化
+* 登录功能优化
 
 ### 2020年10月27日 更新版本至 v1.2.0
 
