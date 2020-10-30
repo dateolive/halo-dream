@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "htmltowxml": "/components/html2wxml-component/html2wxml",
-    "comments":"/components/comments/comments"
+    "comments":"/components/comments/comments",
+    "share-box": "/components/shareBox/index"
   }
 }

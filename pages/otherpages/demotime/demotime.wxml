@@ -9,6 +9,13 @@
 </view>
 
 <view class="cu-timeline">
+    <view class="cu-item text-green  cuIcon-emoji">
+            <view class="bg-green  content shadow-blur">
+                新增邮箱回复功能，界面ui优化，生成海报功能，评论区一级到四级回复bug修复
+            </view>
+        </view>
+        
+        <view class="cu-time">2020.10.30</view>
     <view class="cu-item text-yellow">
             <view class="bg-yellow  content shadow-blur">
                 b站追番追剧页面实现，评论区优化，登录功能优化

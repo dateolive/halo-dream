@@ -1,7 +1,6 @@
 <!--components/article/article.wxml-->
-<view class="padding-sm solid-bottom margin-top"></view>
-<view class="cu-card case no-card animation-scale-up" bind:tap="itemClick" style="animation-delay: {{(index+1)*0.2*animationTime}}s;">
-<view class="cu-item shadow">
+<view class="cu-card radius radius shadow-blur case  animation-scale-up" bind:tap="itemClick" style="animation-delay: {{(index+1)*0.2*animationTime}}s;">
+<view class="cu-item radius">
     <view class="image">
       <image src="{{item.post_full_image || imgurl}}" mode="widthFix"></image>
       <view class="cu-tag radius bg-grey" wx:if="{{item.category_name}}">{{item.category_name}}</view>

@@ -32,6 +32,10 @@ Page({
     formid:'',
     islogin:false,
     hiddenbutton:false,
+    inputemail: '邮箱必填(留言回复后将会发邮件给你)',
+    Email:'2448282543@qq.com',
+    SaveEmail: '',
+    isCanDraw: false
   },
 
   /**
@@ -177,8 +181,18 @@ Page({
     const replyid=this.data.replyid
     const name=this.data.author_name
     const url=this.data.author_url
-    const email='2448282543@qq.com'
     const userid=this.data.userid
+    var email=''
+    try{
+       email=wx.getStorageSync('email')
+      if(email){
+        console.log('获取email数据成功')
+      }else{
+        email='2448282543@qq.com'
+      }
+    }catch(e){
+      console.log('缓存失败')
+    }
     const datas={
       post:this.data.postid,//
       author_name:name,//
@@ -210,8 +224,8 @@ Page({
     }
   }else{
     wx.showToast({
-      title: '不能为空',
-      icon: 'fail',
+      title: '评论内容或邮箱不能为空',
+      icon:'none',
       duration: 1500
     })
   }
@@ -228,6 +242,8 @@ Page({
           islogin:true,
           hiddenbutton:true
         });
+        wx.setStorageSync('avatarUrl', e.detail.userInfo.avatarUrl)
+        wx.setStorageSync('nickName', e.detail.userInfo.nickName)
     } else {
         //用户按了拒绝按钮
         wx.showModal({
@@ -243,6 +259,56 @@ Page({
             }
         });
     }
+},
+clickadduserinfo(e) {
+  try{
+    const inputemail=wx.getStorageSync('email')
+    if(inputemail){
+      this.setData({
+        inputemail
+      })
+    }
+  }catch(e){}
+  this.setData({
+    modalName: e.currentTarget.dataset.target,
+  })
+},
+inputemail(e){
+    var content = e.detail.value.replace(/\s+/g, '');
+    this.setData({
+        Email: content,
+    })
+},
+hideModal(e) {
+  this.setData({
+    modalName: null
+  })
+},
+saveinfo(e){
+  var that=this
+  try{
+    var emaildata=wx.getStorageSync('email')
+    if(emaildata){
+      that.setData({
+        modalName: null,
+        SaveEmail:emaildata
+      })
+    }else{
+      const Emali=that.data.Email
+      that.setData({
+        modalName: null,
+        SaveEmail:Emali
+      })
+      wx.setStorageSync('email',Emali)
+    }
+  }catch(e){
+    console.log(e)
+  }
+},
+createShareImage() {
+  this.setData({
+    isCanDraw: !this.data.isCanDraw
+  })
 }
 
   

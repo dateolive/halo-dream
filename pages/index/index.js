@@ -36,8 +36,15 @@ Page({
         articles:oldarticles,
         page:page
       })
+      wx.showToast({
+        icon:'loading',
+        title: '数据加载中',
+        duration: 1000,
+        mask:true
+    })
     }else{
       wx.showToast({
+        icon:'none',
         title: '已经到底部了',
         duration: 1500
     })

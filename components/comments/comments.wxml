@@ -2,10 +2,10 @@
 <block wx:if="{{allcomments.length>0?true:false}}">
   <block wx:for="{{allcomments}}" wx:key="index" wx:for-index="allindex">
     <view class="cu-chat">
-      <view class="cu-item"  bind:tap="clickparentcomments" data-id="{{item.id}}" data-name="{{item.author_name}}" data-userid="{{item.userid}}" data-formId="{{item.formId}}">
+      <view class="cu-item" bind:tap="clickparentcomments" data-id="{{item.id}}" data-name="{{item.author_name}}"
+        data-userid="{{item.userid}}" data-formId="{{item.formId}}">
         <view class="basis-xs">
-          <view class="cu-avatar lg round margin-left-sm"
-            style="background-image:url({{item.author_url}});"></view>
+          <view class="cu-avatar lg round margin-left-sm" style="background-image:url({{item.author_url}});"></view>
         </view>
         <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
           <view class="padding-xs">
@@ -21,28 +21,103 @@
           </view>
         </view>
       </view>
-      <view wx:if="{{allcomments[allindex].child.length>0?true:false}}">
-        <view class="cu-item" wx:for="{{allcomments[allindex].child}}" wx:key="index"
-                              bind:tap="clickcchildcomments" data-id="{{item.id}}" data-name="{{item.author_name}}" data-userid="{{item.userid}}" data-formId="{{item.formId}}">
+      <!--一级回复-->
+      <view wx:for="{{item.child}}" wx:for-item="item1" wx:key="itemid1" wx:for-index="idx"
+        bind:tap="clickcchildcomments" data-id="{{item1.id}}" data-name="{{item1.author_name}}"
+        data-userid="{{item1.userid}}" data-formId="{{item1.formId}}">
+        <view class="cu-item">
           <view class="basis-xs">
-          <view class="cu-avatar lg round margin-left-sm"
-            style="background-image:url({{item.author_url}});"></view>
-        </view>
-        <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
-          <view class="padding-xs">
-            <text class="text-black text-bold">{{item.author_name}} @ {{allcomments[allindex].author_name}}</text>
-            <view class="fr text-xs" style="line-height: 32rpx;">
-              <text class="text-grey">{{item.date}}</text>
+            <view class="cu-avatar lg round margin-left-sm" style="background-image:url({{item1.author_url}});"></view>
+          </view>
+          <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
+            <view class="padding-xs">
+              <text class="text-black text-bold">{{item1.author_name}} @ {{item.author_name}}</text>
+              <view class="fr text-xs" style="line-height: 32rpx;">
+                <text class="text-grey">{{item1.date}}</text>
+              </view>
+            </view>
+            <view class="main">
+              <view class="content">
+                <text>{{item1.content}}</text>
+              </view>
             </view>
           </view>
-          <view class="main">
-            <view class="content">
-              <text>{{item.content}}</text>
+        </view>
+        <!--二级回复-->
+
+        <view wx:for="{{item1.child}}" wx:for-item="item2" wx:key="itemid2" wx:for-index="idx" data-id="{{item2.id}}"
+          data-name="{{item2.author_name}}" data-userid="{{item2.userid}}" data-formId="{{item2.formId}}">
+          <view class="cu-item">
+            <view class="basis-xs">
+              <view class="cu-avatar lg round margin-left-sm" style="background-image:url({{item2.author_url}});">
+              </view>
+            </view>
+            <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
+              <view class="padding-xs">
+                <text class="text-black text-bold">{{item2.author_name}} @ {{item1.author_name}}</text>
+                <view class="fr text-xs" style="line-height: 32rpx;">
+                  <text class="text-grey">{{item2.date}}</text>
+                </view>
+              </view>
+              <view class="main">
+                <view class="content">
+                  <text>{{item2.content}}</text>
+                </view>
+              </view>
             </view>
           </view>
-        </view>
+          <!--三级回复-->
+          <view wx:for="{{item2.child}}" wx:for-item="item3" wx:key="itemid3" wx:for-index="idx" data-id="{{item3.id}}"
+            data-name="{{item3.author_name}}" data-userid="{{item3.userid}}" data-formId="{{item3.formId}}">
+            <view class="cu-item">
+              <view class="basis-xs">
+                <view class="cu-avatar lg round margin-left-sm" style="background-image:url({{item3.author_url}});">
+                </view>
+              </view>
+              <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
+                <view class="padding-xs">
+                  <text class="text-black text-bold">{{item3.author_name}} @ {{item2.author_name}}</text>
+                  <view class="fr text-xs" style="line-height: 32rpx;">
+                    <text class="text-grey">{{item3.date}}</text>
+                  </view>
+                </view>
+                <view class="main">
+                  <view class="content">
+                    <text>{{item3.content}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <!--四级回复-->
+
+            <view wx:for="{{item3.child}}" wx:key="itemid4" wx:for-index="idx" wx:for-item="item4">
+              <view class="cu-item">
+                <view class="basis-xs">
+                  <view class="cu-avatar lg round margin-left-sm" style="background-image:url({{item4.author_url}});">
+                  </view>
+                </view>
+                <view class="grid col-1 basis-xl solid-bottom" style="min-height:120rpx;">
+                  <view class="padding-xs">
+                    <text class="text-black text-bold">{{item4.author_name}} @ {{item3.author_name}}</text>
+                    <view class="fr text-xs" style="line-height: 32rpx;">
+                      <text class="text-grey">{{item4.date}}</text>
+                    </view>
+                  </view>
+                  <view class="main">
+                    <view class="content">
+                      <text>{{item4.content}}</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
         </view>
       </view>
+
+
+
+
     </view>
   </block>
 </block>

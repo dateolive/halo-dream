@@ -38,7 +38,6 @@ Component({
         'userid':userid
       }
       this.triggerEvent('parentcomment',data,{})
-
     },
     clickcchildcomments(e){
  

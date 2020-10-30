@@ -28,9 +28,18 @@ Component({
   SearchSubmit: function (e) {
      // console.log(this.data.SearchContent)
       const keyword=this.data.SearchContent
-      wx.navigateTo({
-        url: '/pages/searchlist/searchlist?keyword='+keyword,
-      })
+      if(keyword.length>0){
+        wx.navigateTo({
+          url: '/pages/searchlist/searchlist?keyword='+keyword,
+        })
+      }else{
+        wx.showToast({
+          title: '搜索内容不能为空',
+          icon:'none',
+          duration:1000
+        })
+      }
+     
   },
   }, 
   options: {
