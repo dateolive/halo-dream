@@ -31,7 +31,7 @@
 
 ## 简介
 
-**Halo-dream**，基于WordPress和WP REST API的博客小程序，界面简洁，轻快，功能强大
+**Halo-dream**，基于WordPress和WP REST API的博客小程序，界面简洁，轻快，功能强大，**支持代码高亮，友链显示功能，b站追番追剧等各种功能**
 
 > ✍ Halo-dream 一款基于wordpress的个人独立博客系统
 > 项目地址：https://github.com/dateolive/halo-dream
