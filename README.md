@@ -63,6 +63,8 @@ export{
 ```
 > 如果需要更改部分图片，可以修改对应的wxml页面的图片url，或者images下的图片
 
+> 关于b站后端接口，和日记接口的，可以联系我，我把api接口代码发给你
+
 
 > 文档正在不断完善中，遇到问题请加作者微信提问或者提交 [**Issues**](https://github.com/dateolive/halo-dream/issues) 等你吐槽...
 
