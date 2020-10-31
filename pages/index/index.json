@@ -2,6 +2,7 @@
   "usingComponents": {
     "swipe":"/components/banner/banner",
     "search":"/components/search/search",
-    "articles":"/components/articles/articles"
+    "articles":"/components/articles/articles",
+    "add-tips": "/components/addTips/addTips"
   }
 }

@@ -1,0 +1,10 @@
+<!--components/addTips/addTips.wxml-->
+<view class="box" wx:if="{{SHOW_TOP}}" style="top:{{custom?navbarHeight:0}}px;" id="add-tips">
+  <view class='arrow' style="margin-right:{{arrowR}}px;"></view>
+  <view class='body' bindtap='hidden' style="margin-right:{{bodyR}}px;">
+		<image src="{{logo}}" class="logo"></image>
+    <view class="tips">将“{{name}}”添加到我的小程序,以后使用更方便</view>
+  </view>
+</view>
+
+

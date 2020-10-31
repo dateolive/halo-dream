@@ -1,6 +1,7 @@
 <cu-custom bgColor="bg-gradual-blue">
 	<view slot="content">首页</view>
 </cu-custom>
+<add-tips name="Halo-Dream" custom/>
 <!--轮播图-->
 <swipe swiperList="{{bannersPost}}" />
 <view style="margin-right:20rpx; margin-left:20rpx;">

@@ -18,7 +18,7 @@
             <view class="text-gray text-sm">
               <text class="cuIcon-attentionfill margin-lr-xs"></text> {{item.pageviews}}
               <text class="cuIcon-appreciatefill margin-lr-xs"></text> {{item.like_count}}
-              <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.total_comments}}
+              <text class="cuIcon-messagefill margin-lr-xs"></text> {{item.total_comments>=0?item.total_comments:item.comment_total}}
             </view>
           </view>
         </view>

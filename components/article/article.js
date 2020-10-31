@@ -29,6 +29,7 @@ Component({
       wx.navigateTo({
         url: '/pages/detail/detail?id='+id+'&comments='+comments,
       })
+      //console.log(this.data.item)
     }
   },
   options: {
