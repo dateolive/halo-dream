@@ -2,11 +2,11 @@
 
 本项目为小程序入门项目，适合练手，但需要一定的前端基础及一点后端知识。
 
-后续还会陆续开发更多功能，由于是第一个版本 **Halo-dream v1.0.0** 会存在不少问题欢迎大家多给我提 **Issues或者Pull requests** 
+后续还会陆续开发更多功能，由于是第一个版本 **Halo-dream v1.0.0** 会存在不少问题欢迎大家多给我提 **Issues** 
 
 项目使用过程中有问题可以联系我``微信:15013962014 ``
 
-> ✍ Halo-dream 一款基于wordpress的个人独立博客系统
+> ✍ Halo-dream 一款基于wordpress的个人独立博客小程序
 
 [![Github](https://img.shields.io/badge/Author-dateolive-FF4500.svg?style=flat-square)](https://github.com/dateolive)
 [![](https://img.shields.io/github/languages/code-size/dateolive/halo-dream.svg?style=flat-square)](https://github.com/dateolive/halo-dream)
@@ -64,7 +64,6 @@ export{
 > 如果需要更改部分图片，可以修改对应的wxml页面的图片url，或者images下的图片
 
 > 关于b站后端接口，和日记接口的，可以联系我，我把api接口代码发给你
-
 
 > 文档正在不断完善中，遇到问题请加作者微信提问或者提交 [**Issues**](https://github.com/dateolive/halo-dream/issues) 等你吐槽...
 
