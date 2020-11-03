@@ -25,6 +25,7 @@ Page({
   _bilibili(type){
     bilibili(type).then(res=>{
       const bilibili=res.data.data.list
+      console.log(bilibili)
       this.setData({
         bilibili
       })

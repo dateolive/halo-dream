@@ -35,7 +35,8 @@ Page({
     inputemail: '邮箱必填(留言回复后将会发邮件给你)',
     Email:'2448282543@qq.com',
     SaveEmail: '',
-    isCanDraw: false
+    isCanDraw: false,
+    isChange:false
   },
 
   /**
@@ -277,6 +278,7 @@ inputemail(e){
     var content = e.detail.value.replace(/\s+/g, '');
     this.setData({
         Email: content,
+        isChange:true
     })
 },
 hideModal(e) {
@@ -288,7 +290,7 @@ saveinfo(e){
   var that=this
   try{
     var emaildata=wx.getStorageSync('email')
-    if(emaildata){
+    if(emaildata&&!that.data.isChange){
       that.setData({
         modalName: null,
         SaveEmail:emaildata
