@@ -1,6 +1,6 @@
 <!--pages/detail/detail.wxml-->
 <scroll-view scroll-y class="DrawerPage" scroll-with-animation="true"
-  style="background-color: {{skin?'#030852':'#ffffff'}};">
+  style="background-color: #fff;">
   <cu-custom bgImage="https://www.datealive.top/wp-content/uploads/2020/10/wave.gif" isBack="{{false}}"
     isCustom="{{true}}" isNav="{{false}}">
     <view slot="backText">返回</view>
@@ -64,7 +64,19 @@
     <htmltowxml text="{{postContent}}" linenums="{{false}}" highlightStyle="darcula" type="md"
       bindWxmlTagATap="wxmlTagATap"></htmltowxml>
   </view>
-
+  <view class="grid col-5 padding-lg justify-center">
+  <view class="cu-bar btn-group">
+  <button class="cu-btn bg-red icon" bindtap="LovethisPost">
+    <text class="cuIcon-appreciate"></text>
+  </button>
+  <button class="cu-btn bg-gradual-red icon" bindtap="showQrcode">
+    <text class="cuIcon-sponsor"></text>
+  </button>
+  <button class="cu-btn bg-green icon" bindtap="createShareImage">
+    <text class="cuIcon-share"></text>
+  </button>
+  </view>
+  </view>
   <view class="cu-bar bg-white align-center">
     <view class="action border-title">
       <text class="text-xxl text-bold text-blue">评论</text>

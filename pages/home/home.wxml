@@ -17,6 +17,12 @@
       </view>
     </view>
     <view class="cu-item arrow">
+      <view class="content" bindtap="CopyLink" data-link="https://www.datealive.top/">
+        <text class="cuIcon-my text-blue"></text>
+        <text class="text-grey">我的博客</text>
+      </view>
+    </view>
+    <view class="cu-item arrow">
       <view class="content" bindtap="showQrcode">
         <text class="cuIcon-appreciatefill text-red"></text>
         <text class="text-grey">赞赏支持</text>
@@ -28,6 +34,8 @@
         <text class="text-grey">意见反馈</text>
       </button>
     </view>
+  
+
   </view>
   <view class="cu-tabbar-height"></view>
 </scroll-view>

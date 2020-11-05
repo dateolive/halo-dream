@@ -31,3 +31,23 @@ export function sendComment(datas){
     })
   })
 }
+export function PostLove(datas){
+  return  new Promise((resolve,reject)=>{
+    wx.request({
+      url: BASEURL+'/wp-json/watch-life-net/v1/post/like',
+      method: 'post',
+      data:datas,
+      success:resolve,
+      fail:reject
+    })
+  })
+}
+export function PostMore(id,tags){
+  return  request({
+    url:'posts?per_page=5&&page=1',
+    data:{
+      exclude:id,
+      tags
+    }
+  })
+}

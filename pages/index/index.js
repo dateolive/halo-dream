@@ -1,4 +1,5 @@
 //index.js
+const app = getApp()
 import { 
   bannersData,
   articleDatas
