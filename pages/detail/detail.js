@@ -208,7 +208,7 @@ Page({
       if (email) {
         console.log('获取email数据成功')
       } else {
-        email = '2448282543@qq.com'
+        email = ''
       }
     } catch (e) {
       console.log('缓存失败')
@@ -224,7 +224,7 @@ Page({
       userid: userid,
       formId: this.data.formId
     }
-    if (this.data.SendContent.length > 0) {
+    if (this.data.SendContent.length > 0 && email.length>0) {
       if (this.data.islogin && this.data.SendContent.length > 0) {
         sendComment(datas).then(res => {
           wx.showToast({
@@ -317,12 +317,23 @@ Page({
           SaveEmail: emaildata
         })
       } else {
-        const Emali = that.data.Email
-        that.setData({
-          modalName: null,
-          SaveEmail: Emali
-        })
-        wx.setStorageSync('email', Emali)
+        const Email = that.data.Email
+        var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+        var isOk= reg.test(Email);
+        if(isOk){
+          that.setData({
+            modalName: null,
+            SaveEmail: Email
+          })
+          wx.setStorageSync('email', Email)
+        }else{
+          wx.showToast({
+            title: '邮箱格式不正确',
+            icon: 'none',
+            duration: 1500
+          })
+        }
+        
       }
     } catch (e) {
       console.log(e)

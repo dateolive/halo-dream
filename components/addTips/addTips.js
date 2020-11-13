@@ -7,7 +7,7 @@ Component({
     },
     duration: {
       type: Number,
-      value: 10
+      value: 5
     },
 		delay: {
 			type: Number,
@@ -36,10 +36,10 @@ Component({
         this.setData({
           SHOW_TOP: true
         })
-      }, this.data.delay * 1000)
+      }, this.data.delay * 500)
       this.duraTimer = setTimeout(() => {
         this.shrink();
-      }, (this.data.duration + this.data.delay) * 1000)
+      }, (this.data.duration + this.data.delay) * 500)
     },
     detached: function() {
       if (this.startTimer) clearTimeout(this.startTimer)

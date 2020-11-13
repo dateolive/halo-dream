@@ -8,6 +8,7 @@
       <text class="text-white text-bold">{{title}}</text>
     </view>
   </cu-custom>
+  <add-tips name="登录后绑定邮箱即可评论" custom/>
   <view bindtouchstart="touchStart" bindtouchend="touchEnd" class="flex justify-center align-center bg-white"
     style="width:100%; height:460rpx; background-image:url({{headimg}}); background-repeat: no-repeat; background-size: 100% 100%;">
   </view>
