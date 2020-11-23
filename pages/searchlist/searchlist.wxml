@@ -4,7 +4,14 @@
     <view slot="backText">返回</view>
     <view slot="content">搜索：{{keyword}}</view>
   </cu-custom>
-
+      <!--加载数据-->
+      <view class="canui-load" wx:if="{{loadModal}}">
+    <view class='cu-load load-modal text-blue' wx:if="{{loadModal}}">
+        <view class='icon-discoverfill text-blue'></view>
+        <image src='/images/loading.png' class='png' mode='aspectFit'></image> 
+        <view class='gray-text'>加载中...</view>
+    </view>
+</view>
   <!--文章列表-->
 <articles articles="{{articles}}"></articles>
 <view class="cu-load bg-white over margin-top-xl"></view>

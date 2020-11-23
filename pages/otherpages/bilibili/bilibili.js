@@ -12,7 +12,8 @@ Page({
     animationTime: 1,
     bilibili:[],
     TabCur: 0,
-    scrollLeft:0
+    scrollLeft:0,
+    loadModal:true
   },
 
   /**
@@ -25,9 +26,10 @@ Page({
   _bilibili(type){
     bilibili(type).then(res=>{
       const bilibili=res.data.data.list
-      console.log(bilibili)
+      //console.log(bilibili)
       this.setData({
-        bilibili
+        bilibili,
+        loadModal:false
       })
     }).catch(err=>{
       console.log(err)
@@ -39,18 +41,20 @@ Page({
   tabSelect(e) {
     this.setData({
       TabCur: e.currentTarget.dataset.id,
-      scrollLeft: (e.currentTarget.dataset.id-1)*60
+      scrollLeft: (e.currentTarget.dataset.id-1)*60,
     })
     if(this.data.TabCur==0){
       const type=1
       this.setData({
-        type
+        type,
+        loadModal:true
       })
       this._bilibili(type)
     }else if(this.data.TabCur==1){
       const type=2
       this.setData({
-        type
+        type,
+        loadModal:true
       })
       this._bilibili(type)
     }

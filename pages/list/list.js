@@ -5,7 +5,8 @@ import {
 Page({
   data: {
     name:'',
-    articles:[]
+    articles:[],
+    loadModal:true
   },
 
   /**
@@ -25,7 +26,8 @@ Page({
       if(res.statusCode === 200){
         const articles=res.data
         this.setData({
-          articles
+          articles,
+          loadModal:false
         })
       }else{
         wx.showToast({

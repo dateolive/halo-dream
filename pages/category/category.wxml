@@ -3,6 +3,14 @@
   <cu-custom bgColor="bg-gradual-blue">
 	<view slot="content">分类</view>
 </cu-custom>
+    <!--加载数据-->
+    <view class="canui-load" wx:if="{{loadModal}}">
+    <view class='cu-load load-modal text-blue' wx:if="{{loadModal}}">
+        <view class='icon-discoverfill text-blue'></view>
+        <image src='/images/loading.png' class='png' mode='aspectFit'></image> 
+        <view class='gray-text'>加载中...</view>
+    </view>
+</view>
   <view class="cu-card">
     <view class="cu-item bg-img shadow-blur animation-scale-up"  wx:for="{{categorys}}" wx:key="index" style="background-image:url({{item.category_thumbnail_image}});animation-delay: {{(index+1)*0.2*animationTime}}s;">
       <view class="cardTitle" bind:tap="clickcategory" data-index="{{index}}" >

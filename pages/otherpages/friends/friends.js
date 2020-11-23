@@ -33,6 +33,7 @@ Page({
         }, {
             colour: 'bg-lightBlue'
         }],
+        loadModal:true
     },
 
     /**
@@ -48,7 +49,8 @@ Page({
 
         const LinksList=res.data.data
         this.setData({
-          LinksList
+          LinksList,
+          loadModal:false
         })
       }).catch(err=>{
         console.log(err)

@@ -9,7 +9,8 @@ Page({
    */
   data: {
     keyword: '',
-    articles: {}
+    articles: {},
+    loadModal:true
   },
 
   /**
@@ -27,7 +28,8 @@ Page({
     searchDatas(keyword).then(res => {
       const articles = res.data
       that.setData({
-        articles
+        articles,
+        loadModal:false
       })
     }).catch(err => {
       console.log(err)

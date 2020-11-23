@@ -9,7 +9,8 @@ Page({
    */
   data: {
     loading: true,
-    diaryContent:''
+    diaryContent:'',
+    loadModal:true
   },
 
   /**
@@ -27,6 +28,7 @@ Page({
       }
       this.setData({
         diaryContent: res.data.data,
+        loadModal:false
       })
     }).catch(err=>{
       console.log(err)

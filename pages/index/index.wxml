@@ -3,6 +3,14 @@
 <cu-custom bgColor="bg-gradual-blue">
 	<view slot="content">首页</view>
 </cu-custom>
+    <!--加载数据-->
+    <view class="canui-load" wx:if="{{loadModal}}">
+    <view class='cu-load load-modal text-blue' wx:if="{{loadModal}}">
+        <view class='icon-discoverfill text-blue'></view>
+        <image src='/images/loading.png' class='png' mode='aspectFit'></image> 
+        <view class='gray-text'>加载中...</view>
+    </view>
+</view>
 <add-tips name="将“Halo-Dream”添加到我的小程序" custom/>
 <!--轮播图-->
 <swipe swiperList="{{bannersPost}}" />

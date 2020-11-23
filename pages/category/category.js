@@ -9,6 +9,7 @@ Page({
     animationTime: 1,
     id:0,
     cnt:20,  //分类显示最多数目
+    loadModal:true
   },
 
   /**
@@ -24,7 +25,8 @@ Page({
   const per_page=res.data.count
   this.setData({
     categorys,
-    per_page
+    per_page,
+    loadModal:false
   })
  }).catch(err=>{
    console.log(err)

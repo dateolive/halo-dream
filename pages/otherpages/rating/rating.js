@@ -5,7 +5,8 @@ import {
 Page({
 
   data: {
-    articles:[]
+    articles:[],
+    loadModal:true
   },
 
   /**
@@ -18,7 +19,8 @@ Page({
     ratingarticles().then(res=>{
       const articles=res.data
       this.setData({
-        articles
+        articles,
+        loadModal:false
       })
     // console.log(articles)
     }).catch(err=>{

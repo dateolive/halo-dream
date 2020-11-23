@@ -9,7 +9,8 @@ Page({
     bannersPost:{},
     articles:[],
     isload:true,
-    page:0
+    page:0,
+    loadModal:true
   },
   onLoad:function (options){
     this._BannersData()
@@ -35,19 +36,17 @@ Page({
       oldarticles.push(...newarticles)
       this.setData({
         articles:oldarticles,
-        page:page
+        page:page,
+        loadModal:false
       })
-      wx.showToast({
-        icon:'loading',
-        title: '数据加载中',
-        duration: 1000,
-        mask:true
-    })
     }else{
       wx.showToast({
         icon:'none',
         title: '已经到底部了',
         duration: 1500
+    })
+    this.setData({
+      loadModal:false
     })
     }
     }).catch(err=>{
@@ -55,6 +54,9 @@ Page({
     })
   },
   onReachBottom(){
+    this.setData({
+      loadModal:true
+    })
       this._articleDatas()
     //  console.log(this.data.isload)
   },

@@ -86,7 +86,7 @@ Page({
       // console.log(res)
       const postContent = res.data.content.rendered
       const title = res.data.title.rendered
-      const headimg = res.data.post_full_image
+      const headimg = res.data.post_full_image || res.data.post_medium_image || res.data.post_large_image || res.data.post_thumbnail_image 
       const lovecnt = res.data.like_count
       const readcnt = res.data.pageviews
       const posttime = res.data.post_date

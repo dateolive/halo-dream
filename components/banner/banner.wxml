@@ -6,7 +6,7 @@
     <swiper-item wx:for="{{swiperList}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
       <view class="swiper-item" bind:tap="itemClick" data-index="{{index}}">
         <view class="bg-img bg-mask padding-tb-xl"
-          style="background-image: url({{item.post_medium_image_300}});height: 414rpx;">
+          style="background-image: url({{item.post_medium_image_300 || item.post_medium_image || item.post_full_image ||  item.post_large_image || item.post_thumbnail_image }});height: 414rpx;">
           <view class="padding-xl text-white">
             <view class="text-center padding-xs text-xl text-bold text-shadow">
               {{item.title.rendered}}
