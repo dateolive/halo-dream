@@ -38,13 +38,13 @@ Page({
       badge: 0,
       name: '项目进展',
       url:'/pages/otherpages/demotime/demotime'
-    },  
+    }, 
     {
-      icon: 'more',
-      color: 'green',
+      icon: 'message',
+      color: 'pink',
       badge: 0,
-      name: '其他功能待开发',
-      url:'/pages/otherpages/otherpages'
+      name: '留言板',
+      url:'/pages/otherpages/message/message'
     }
   ],
     gridCol:3,

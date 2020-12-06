@@ -1,6 +1,6 @@
 <!--components/banner/banner.wxml-->
 <view class="bg-gray">
-  <swiper class="card-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true"
+  <swiper class="card-swiper square-dot" indicator-dots="true" circular="true"
     autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3"
     indicator-active-color="#0081ff">
     <swiper-item wx:for="{{swiperList}}" wx:key="index" class="{{cardCur==index?'cur':''}}">

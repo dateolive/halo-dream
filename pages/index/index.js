@@ -30,7 +30,7 @@ Page({
     const page=this.data.page+1
     articleDatas(page).then(res=>{
       if(res.statusCode === 200){
-     //console.log(res.data.length)
+   //  console.log(res.data)
       const newarticles=res.data
       const oldarticles=this.data.articles
       oldarticles.push(...newarticles)

@@ -80,7 +80,7 @@ Component({
               css: {
                 left: '50rpx',
                 width: '650rpx',
-                height: '640rpx',
+                height: '370rpx',
                 top: '50rpx',
                 borderRadius: '20rpx',
               }

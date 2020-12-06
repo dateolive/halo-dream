@@ -11,7 +11,8 @@
     "pages/otherpages/rating/rating",
     "pages/otherpages/friends/friends",
     "pages/otherpages/diary/diary",
-    "pages/otherpages/bilibili/bilibili"
+    "pages/otherpages/bilibili/bilibili",
+    "pages/otherpages/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",

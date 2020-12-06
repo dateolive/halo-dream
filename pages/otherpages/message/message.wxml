@@ -1,0 +1,79 @@
+<!--pages/otherpages/message/message.wxml-->
+<scroll-view scroll-y class="DrawerPage" scroll-with-animation="true" 
+      style="background-color: bg-grey;">
+
+<cu-custom bgColor="bg-gradual-blue" isCustom="{{true}}">
+<view slot="backText">返回</view>
+<view slot="content">留言板</view>
+</cu-custom>
+
+<view class="cu-chat">
+  <block wx:for="{{message}}" wx:if="{{message.length>0 && item.word.length>0}}" wx:key>
+    <view class="cu-item" wx:if="{{item.name!='datealive'}}">
+      <view class="cu-avatar radius" style="background-image:url({{item.head_image}});"></view>
+      <view class="main">
+        <view class="content shadow">
+          <text style="word-break:break-all" selectable>{{item.word}}</text>
+        </view>
+      </view>
+      <view class="date">{{item.time}}</view>
+    </view>
+    <view class="cu-item self" wx:else>
+
+      <view class="main">
+        <view class="content bg-green shadow">
+          <text style="word-break:break-all" selectable>{{item.word}}</text>
+        </view>
+      </view>
+      <view class="cu-avatar radius" style="background-image:url({{item.head_image}});"></view>
+      <view class="date">{{item.time}}</view>
+    </view>
+  </block>
+</view>
+<view id="end"></view>
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-sound text-grey"></text>
+  </view>
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}"
+    maxlength="300" cursor-spacing="10" bindinput="inputcontent"></input>
+  <view class="action">
+    <text class="cuIcon-emojifill text-grey"></text>
+  </view>
+  <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="DialogModal1">发送</button>
+</view>
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">留言板个人信息</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="cu-form-group">
+        <view class="title">昵称</view>
+        <input name="name" placeholder="昵称必填"></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">QQ</view>
+        <input name="qq" placeholder="拉取QQ头像*"></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">邮箱</view>
+        <input name="email" placeholder="邮箱必填"></input>
+      </view>
+      <view class="cu-form-group">
+        <view class="title">博客</view>
+        <input name="site" placeholder="可不填"></input>
+      </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal" >取消</button>
+        <button class="cu-btn bg-green margin-left"  formType="submit">确定</button>
+      </view>
+    </view>
+  </form>
+  </view>
+</view>
+</scroll-view>
