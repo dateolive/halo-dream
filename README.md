@@ -44,7 +44,9 @@
 git clone https://github.com/dateolive/halo-dream.git
 ```
 
-代码下载后，用小程序 IDE 打开后即可使用，修改service文件夹下的config.js中的BASEURL。
+代码下载后，用小程序 IDE 打开MiniProgram文件夹后即可使用，修改service文件夹下的config.js中的BASEURL。
+
+与其配套的微慕插件和api接口在Plug-Api文件夹中，上传到服务器下即可访问该api
 
 **如果需要真机调试，请在打开项目时，填上自己的小程序 id**
 
@@ -63,7 +65,7 @@ export{
 ```
 > 如果需要更改部分图片，可以修改对应的wxml页面的图片url，或者images下的图片
 
-> 关于b站后端接口，和日记接口的，可以联系我，我把api接口代码发给你
+> 关于日记api接口(百度搜索wordpress添加说说，根据步骤添加即可使用该api接口)
 
 > 文档正在不断完善中，遇到问题请加作者微信提问或者提交 [**Issues**](https://github.com/dateolive/halo-dream/issues) 等你吐槽...
 
