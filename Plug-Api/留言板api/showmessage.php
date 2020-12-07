@@ -5,7 +5,7 @@ include_once "util.php";
 @$dataSize=10;
 @$index = empty($_GET["index"]) ? 1 : $_GET["index"];
 @$allcount=GetCount();
-if(@$allcount>=ceil($dataSize*$index)){
+if(@$allcount>=ceil($dataSize*($index-1>=1?$index-1:1))){
 $sql = "select * from  obj_message  ORDER by time desc limit " . (($index - 1) * $dataSize) . "," . $dataSize;
 @$array = liuyan($sql);
 if (!empty($array)) {
