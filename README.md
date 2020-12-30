@@ -46,7 +46,7 @@ git clone https://github.com/dateolive/halo-dream.git
 
 代码下载后，用小程序 IDE 打开MiniProgram文件夹后即可使用，修改service文件夹下的config.js中的BASEURL。
 
-与其配套的微慕插件和api接口在Plug-Api文件夹中，上传到服务器下即可访问该api
+与其配套的微慕开源插件（在此感谢原作者）和api接口在Plug-Api文件夹中，上传到服务器下即可访问该api
 
 **如果需要真机调试，请在打开项目时，填上自己的小程序 id**
 
