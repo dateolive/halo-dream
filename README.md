@@ -172,5 +172,4 @@ export{
 
 
 
-## Stargazers over time
-[![Stargazers over time](https://starchart.cc/dateolive/halo-dream.svg)](https://starchart.cc/dateolive/halo-dream)
+
